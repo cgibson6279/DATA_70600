@@ -6,7 +6,7 @@ from pandas_geojson import to_geojson, write_geojson
 import numpy as np
 
 INPUT_PATH = "./data/poi.csv"
-OUT_PATH = "./data/poi.json"
+OUT_PATH = "./src/poi.json"
 if __name__ == "__main__":
     df = pd.read_csv(INPUT_PATH)
     df["latitude"] = df["latitude_radian"].apply(lambda x: math.degrees(x))
